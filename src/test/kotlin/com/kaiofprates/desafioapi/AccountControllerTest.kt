@@ -1,6 +1,8 @@
 package com.kaiofprates.desafioapi
 
 import com.fasterxml.jackson.databind.ObjectMapper
+import com.kaiofprates.desafioapi.model.Account
+import com.kaiofprates.desafioapi.repository.AccountRepository
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -11,7 +13,6 @@ import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers
-import java.awt.PageAttributes
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -19,7 +20,7 @@ import java.awt.PageAttributes
 class AccountControllerTest {
     // injeta do mock
     @Autowired lateinit var mockMvc: MockMvc
-    // injeto o repositório
+    // injeta o repositório
     @Autowired lateinit var accountRepository: AccountRepository
 
     @Test
